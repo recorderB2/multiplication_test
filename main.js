@@ -153,7 +153,10 @@ next.onclick = function () {
         answer.value = "";
       }
       next.style.display = "block";
-    }, 6000);
+    }, 8000);
+    setTimeout(function () {
+      next.click();
+    }, 10500);
     list.splice(random, 1);
   } else {
     document.getElementsByTagName("body")[0].innerHTML = "Wrong Answers = " + f;
