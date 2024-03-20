@@ -125,22 +125,37 @@ let counter = document.getElementById("counter");
 let question = document.getElementById("question");
 let answer = document.getElementById("answer");
 let next = document.getElementById("next");
+let correct = document.getElementById("correct");
+let abox = document.getElementById("abox");
 let c = 0;
+let f = 0;
 next.onclick = function () {
   next.style.display = "none";
   if (c != 36) {
-    answer.innerHTML = "";
+    abox.style.backgroundColor = "white";
+    abox.style.color = "black";
+    correct.innerHTML = "Answer";
+    answer.value = "";
+    answer.focus();
     counter.innerHTML = `Question ${++c}`;
     let random = Math.floor(Math.random() * list.length);
     let rq = `${list[random][0]} x ${list[random][1]}`;
     question.innerHTML = rq;
     let a = list[random][0] * list[random][1];
     setTimeout(function () {
-      answer.innerHTML = a;
+      abox.style.color = "white";
+      if (answer.value == a) {
+        abox.style.backgroundColor = "green";
+      } else {
+        f += 1;
+        abox.style.backgroundColor = "red";
+        correct.innerHTML = a;
+        answer.value = "";
+      }
       next.style.display = "block";
-    }, 2750);
+    }, 6000);
     list.splice(random, 1);
   } else {
-    document.getElementsByTagName("body")[0].innerHTML = "affren sana!!";
+    document.getElementsByTagName("body")[0].innerHTML = "Wrong Answers = " + f;
   }
 };
