@@ -152,7 +152,6 @@ next.onclick = function () {
         correct.innerHTML = a;
         answer.value = "";
       }
-      next.style.display = "block";
     }, 8000);
     setTimeout(function () {
       next.click();
