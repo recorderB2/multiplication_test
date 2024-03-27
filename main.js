@@ -1,4 +1,4 @@
-list = [
+hlist = [
   //   [0, 0],
   //   [0, 1],
   //   [0, 2],
@@ -155,7 +155,7 @@ next.onclick = function () {
     }, 6000);
     setTimeout(function () {
       next.click();
-    }, 8500);
+    }, 9500);
     list.splice(random, 1);
   } else {
     document.getElementsByTagName("body")[0].innerHTML = "Wrong Answers = " + f;
