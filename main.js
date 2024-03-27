@@ -129,6 +129,7 @@ let correct = document.getElementById("correct");
 let abox = document.getElementById("abox");
 let c = 0;
 let f = 0;
+let wrongs = [];
 next.onclick = function () {
   next.style.display = "none";
   if (c != list.length) {
@@ -151,13 +152,23 @@ next.onclick = function () {
         abox.style.backgroundColor = "red";
         correct.innerHTML = a;
         answer.value = "";
+        wrongs.push([rq, a]);
       }
     }, 6000);
     setTimeout(function () {
       next.click();
-    }, 9500);
+    }, 9000);
     list.splice(random, 1);
   } else {
-    document.getElementsByTagName("body")[0].innerHTML = "Wrong Answers = " + f;
+    let cbox = document.createElement("div");
+    wrongs.forEach(function(ele){
+      let cdiv = document.createElement("div");
+      let ctext = document.createTextNode(`${ele[0]} = ${ele[1]}`);
+      cdiv.appendChild(ctext);
+      cbox.appendChild(cdiv);
+    });
+    let body = document.getElementsByTagName("body")[0];
+    body.innerHTML = `<h2>Wrong Answers: ${f}</h2>`;
+    body.appendChild(cbox);
   }
 };
