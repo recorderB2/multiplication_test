@@ -152,10 +152,10 @@ next.onclick = function () {
         correct.innerHTML = a;
         answer.value = "";
       }
-    }, 8000);
+    }, 6000);
     setTimeout(function () {
       next.click();
-    }, 10500);
+    }, 8500);
     list.splice(random, 1);
   } else {
     document.getElementsByTagName("body")[0].innerHTML = "Wrong Answers = " + f;
