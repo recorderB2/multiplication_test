@@ -1,4 +1,4 @@
-list = [
+let list = [
   //   [0, 0],
   //   [0, 1],
   //   [0, 2],
@@ -132,7 +132,7 @@ let f = 0;
 let wrongs = [];
 next.onclick = function () {
   next.style.display = "none";
-  if (c != list.length) {
+  if (c != 6) {
     abox.style.backgroundColor = "white";
     abox.style.color = "black";
     correct.innerHTML = "Answer";
