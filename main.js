@@ -71,10 +71,10 @@ let list = [
   //   [6, 3],
   //   [6, 4],
   //   [6, 5],
-  ///[6, 6],
-  ///[6, 7],
-  ///[6, 8],
-  ///[6, 9],
+  [6, 6],
+  [6, 7],
+  [6, 8],
+  [6, 9],
   //   [6, 10],
   //   [7, 0],
   //   [7, 1],
@@ -132,7 +132,7 @@ let f = 0;
 let wrongs = [];
 next.onclick = function () {
   next.style.display = "none";
-  if (c != 6) {
+  if (c != 10) {
     abox.style.backgroundColor = "white";
     abox.style.color = "black";
     correct.innerHTML = "Answer";
