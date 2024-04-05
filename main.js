@@ -59,11 +59,11 @@ let list = [
   //   [5, 2],
   //   [5, 3],
   //   [5, 4],
-  [5, 5],
-  [5, 6],
-  [5, 7],
-  [5, 8],
-  [5, 9],
+  ///[5, 5],
+  ///[5, 6],
+  ///[5, 7],
+  ///[5, 8],
+  /// [5, 9],
   //   [5, 10],
   //   [6, 0],
   //   [6, 1],
@@ -132,7 +132,7 @@ let f = 0;
 let wrongs = [];
 next.onclick = function () {
   next.style.display = "none";
-  if (c != 15) {
+  if (c != 10) {
     abox.style.backgroundColor = "white";
     abox.style.color = "black";
     correct.innerHTML = "Answer";
